@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hybrid.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>440567CC9371C9DA9DEE43711B1129312F1AC1AC</string>
+				<key>dateExpires</key>
+				<string>2021. 10. 4.</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>7Z48Z4L6Y4.com.gmkapp</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>7Z48Z4L6Y4</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>hybrid.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>8c0f7cfb-0483-4d38-ad06-358af6d46464</string>
+				<key>name</key>
+				<string>iOS Team Inhouse Provisioning Profile: com.gmkapp</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>7Z48Z4L6Y4</string>
+				<key>name</key>
+				<string>GM Korea Company</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

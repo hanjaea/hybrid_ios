@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <style>
+                body,.top-bar{margin-top:1.9em}
+                </style>
+            <!-- MobileDesk -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="./common-interface.js"></script>
+            
+    </head>
+    <body bgcolor="white" style="height:760px" >
+        <script type="text/javascript">
+            
+            // 사용자 정의 저장 데이터 사용시 사용
+            function getVariable(key) {
+                interface.getVariable(key,function(value){
+                                      document.getElementById('result').innerHTML = value;
+                                      });
+                                      
+            }
+        
+        // 사용자 정의 저장 데이터 저장 시 사용(사용자가 key, value 값을 주어서 필요 시 해당 key롤 저장 된 값을 언제든 사용 가능 합니다.)
+        function setVariable(key,value){
+            interface.setVariable(key,value);
+            alert('setData key : '+key +'  value : '+ value);
+        }
+        
+        function getTokenId(){
+            interface.getTokenId(function(value){
+                                 document.getElementById('result').innerHTML = value;
+                                 });
+        }
+        
+        function getAppVersion(){
+            interface.getAppVersion(function(value){
+                                    document.getElementById('result').innerHTML = value;
+                                    });
+        }
+        function getAppModel(){
+            interface.getAppModel(function(value){
+                                  document.getElementById('result').innerHTML = value;
+                                  });
+        }
+        function callOutBrowser(url){
+            interface.callOutBrowser(url);
+        }
+        function callOutBrowser(url){
+            interface.callOutBrowser(url);
+        }
+        function callAnotherView(url){
+            interface.callAnotherView(url);
+        }
+        function getCamera(){
+            interface.getCamera(function(value){
+                                document.getElementById('result').innerHTML = value;
+                                });
+        }
+        function fileDownload(url, ext){
+            interface.fileDownload(url, ext ,function(value){
+                                   document.getElementById('result').innerHTML = value;
+                                   });
+        }
+        function downloadVideo(url){
+            interface.downloadVideo(url,function(value){
+                                    document.getElementById('result').innerHTML = value;
+                                    });
+           //location.href= url
+        }
+        $(document).ready(function() {
+                          
+                          
+                          });
+            </script>
+        
+        
+        
+        
+        <fieldset>
+            <legend> interface</legend>
+            <p><label>key: <input type="text" id= "key" name="key" placeholder="key" value="key"></label></p>
+            <p><label>value: <input type="text" id="val" name="val" placeholder="value" value="value"></label></p>
+            <p><label>getData: <input type="button" value="getData" onclick="javascript:getVariable(document.getElementById('key').value);" /></label></p>
+            <p><label>setData: <input type="button" value="setData" onclick="javascript:setVariable(document.getElementById('key').value, document.getElementById('val').value);" style="left:50%;"/></label></p>
+            <hr>
+            <p><label>버전 호출: <input type="button" value="버전" onclick="javascript:getAppVersion();"/></label></p>
+            <p><label>모델 호출: <input type="button" value="버전" onclick="javascript:getAppModel();"/></label></p>
+            <p><label>토큰 호출: <input type="button" value="getTokenId" onclick="javascript:getTokenId();"/></label></p>
+           
+            <p><label>외부브라우져링크:<input type="button" value="callOutBrowser" onclick="javascript:callOutBrowser('https://m.naver.com');" /></label></p>
+            
+            <p><label>상세액티비티 호출:<input type="button" value="callAnotherView" onclick="javascript:callAnotherView('https://www.daum.net');" /></label></p>
+            
+            <p><label>파일 다운로드:<input type="button" value="fileDownload"
+                onclick="javascript:fileDownload('https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4','mp4');" /></label></p>
+             <p><label>카메라 호출: <input type="button" value="getCamera" onclick="javascript:getCamera();"/></label></p>
+            
+            
+        </fieldset>
+        
+        <br/>
+        <br/>
+        
+        <fieldset>
+            <legend>hybrid interface result</legend>
+            <p><span id="result"/></p>
+        </fieldset>
+       
+        
+        </div>
+    </body>
+</html>
